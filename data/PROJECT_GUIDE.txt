@@ -1,0 +1,27 @@
+CUSTOMER CHURN PREDICTION — PROJECT GUIDE
+
+Dataset: customer_churn.csv
+Rows: 7,043
+Target: Churn (Yes/No)
+
+This practice dataset is designed for an end-to-end classification project.
+It contains a small amount of missing data intentionally.
+
+Suggested workflow:
+1. Understand the business problem
+2. Load and inspect data
+3. Clean the data
+4. Perform EDA
+5. Separate features and target
+6. Train/test split
+7. Preprocessing: encoding and scaling where appropriate
+8. Train multiple classification models
+9. Evaluate using confusion matrix, precision, recall, F1 and ROC-AUC
+10. Cross-validation
+11. Hyperparameter tuning
+12. Select the best model
+13. Save the model
+14. Build a prediction function
+15. Document the project on GitHub
+
+Do not jump directly to model training. The goal is to learn the complete ML workflow.
