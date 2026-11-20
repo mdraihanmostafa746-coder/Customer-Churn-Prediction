@@ -1,100 +1,136 @@
 # Customer Churn Prediction
 
-A Machine Learning project that predicts whether a customer is likely to churn based on customer demographics, services, contract details, payment information, tenure, and billing data.
+A Machine Learning project that analyzes customer data and predicts whether a telecom customer is likely to leave the service (Churn) using classification algorithms.
 
-The project covers the complete Machine Learning workflow:
+## Project Overview
 
-Data Collection → Data Cleaning → Exploratory Data Analysis → Feature Engineering → Preprocessing → Model Training → Model Evaluation → Cross Validation → Hyperparameter Tuning → Final Model Selection → Prediction
+Customer churn is an important challenge for telecom companies. Understanding customer behavior and identifying customers who are likely to leave can help businesses improve customer retention.
 
----
+In this project, I performed Exploratory Data Analysis (EDA), data preprocessing, model training, and evaluation to predict customer churn.
 
-## 📌 Project Overview
+## Dataset
 
-Customer churn is a major problem for subscription-based businesses such as telecommunications companies.
+- **Dataset:** Telco Customer Churn
+- **Total Records:** 7,043
+- **Total Features:** 20
+- **Target Variable:** Churn
 
-If a company can identify customers who are likely to leave, it can take preventive actions such as:
+The dataset contains customer information such as:
+- Customer demographics
+- Account information
+- Services subscribed
+- Contract details
+- Payment methods
+- Monthly and total charges
 
-- Personalized offers
-- Customer support
-- Contract upgrades
-- Discounts
-- Retention campaigns
+## Technologies & Libraries
 
-The objective of this project is to build a classification model that predicts:
+- Python
+- Pandas
+- NumPy
+- Matplotlib
+- Seaborn
+- Scikit-learn
+- Streamlit
 
-- `1` → Customer will churn
-- `0` → Customer will not churn
+## Project Workflow
 
----
+1. Data Loading and Understanding
+2. Data Cleaning and Preprocessing
+3. Exploratory Data Analysis (EDA)
+4. Feature and Target Preparation
+5. Train-Test Split
+6. Feature Scaling and Encoding
+7. Model Training
+8. Model Evaluation
+9. Cross-Validation
+10. Hyperparameter Tuning
 
-## 🎯 Problem Statement
+## Machine Learning Models
 
-Build a Machine Learning classification system that predicts customer churn using historical customer data.
+The following classification algorithms were implemented and evaluated:
 
-The model should not only achieve good accuracy but should also provide a reasonable balance between:
+- Logistic Regression
+- Decision Tree
+- Random Forest
+- K-Nearest Neighbors (KNN)
+- Support Vector Machine (SVM)
 
+## Model Evaluation
+
+Models were evaluated using:
+
+- Accuracy
 - Precision
 - Recall
 - F1 Score
-- ROC-AUC
+- ROC-AUC Score
+- Confusion Matrix
 
-Since missing an actual churner can be costly for a business, Recall is an important metric in this project.
+Based on the original notebook's test-set evaluation, Logistic Regression achieved the highest F1 Score among the five tested models.
 
----
+## Web Application
 
-## 📊 Dataset
+A Streamlit web application is being developed to make customer churn prediction interactive.
 
-The project uses the Telco Customer Churn dataset.
+Planned features include:
 
-The dataset contains information about:
+- Customer information input
+- Churn prediction
+- Churn probability
+- Model performance metrics
+- Interactive user interface
 
-### Customer Information
-
-- Gender
-- Senior Citizen
-- Partner
-- Dependents
-
-### Services
-
-- Phone Service
-- Multiple Lines
-- Internet Service
-- Online Security
-- Online Backup
-- Device Protection
-- Tech Support
-- Streaming TV
-- Streaming Movies
-
-### Account Information
-
-- Tenure
-- Contract
-- Paperless Billing
-- Payment Method
-
-### Billing Information
-
-- Monthly Charges
-- Total Charges
-
-### Target
-
-- Churn
-
----
-
-## 🧠 Machine Learning Problem
-
-This is a:
-
-**Binary Classification Problem**
-
-Target:
+## Project Structure
 
 ```text
-Churn
+Customer-Churn-Prediction/
+│
+├── app.py
+├── train_model.py
+├── model.pkl
+├── requirements.txt
+├── README.md
+│
+└── data/
+    └── customer_churn.csv
+```
 
-Yes → 1
-No  → 0
+*Note: The project structure will be updated as development progresses.*
+
+## Run Locally
+
+Clone the repository:
+
+```bash
+git clone YOUR_REPOSITORY_URL
+```
+
+Navigate to the project directory:
+
+```bash
+cd Customer-Churn-Prediction
+```
+
+Install dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+Run the Streamlit application:
+
+```bash
+streamlit run app.py
+```
+
+## Project Status
+
+🚧 Complete Streamlit application deployment.
+
+## Author
+
+**Md Raihan Mostafa**
+
+B.Sc. Data Science Student | Aspiring AI Engineer
+
